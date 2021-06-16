@@ -7,8 +7,6 @@ public class ObstaculoController : MonoBehaviour
 
     private Rigidbody2D ObstaculoRB;
     private GameController _GameController;
-    
-
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +15,9 @@ public class ObstaculoController : MonoBehaviour
         //ObstaculoRB.velocity = new Vector2(-5f, 0);
 
         _GameController = FindObjectOfType(typeof(GameController)) as GameController;
-
     }
 
-    // Update is called once per frame
+  
     void FixedUpdate()
     {
         MoveObjeto();

@@ -14,6 +14,7 @@ public class DeslocamentoBG : MonoBehaviour
     public string       _sortingLayer;
     public int          _orderinLayer;
 
+    public float timer;
 
 
     // Start is called before the first frame update
@@ -31,6 +32,8 @@ public class DeslocamentoBG : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+
         _offset += _offsetIncremento; //offset = offset + incremento (+2, +3, +4)
         _objetoMaterial.SetTextureOffset("_MainTex", new Vector2(_offset * _offsetVelocidade, 0));
 
@@ -39,6 +42,14 @@ public class DeslocamentoBG : MonoBehaviour
         {
             _offsetVelocidade = 0;
           
+        }
+
+        //AUMENTO DE VELOCIDADE
+        if (timer >= 10)
+        {
+            _offsetVelocidade = _offsetVelocidade * 1.2f;
+
+            timer = 0;
         }
     }
 }

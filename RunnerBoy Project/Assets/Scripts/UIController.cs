@@ -6,13 +6,8 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     public Text textmetros;
-    public Text textkilometros;
-    public static float metros;
-    public float kilometros;
-    public int limitemetros;
-    public GameObject km;
-
-
+    public float metros;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,20 +18,11 @@ public class UIController : MonoBehaviour
     void Update()
     {
         textmetros.text = metros.ToString("0");
-        textkilometros.text = kilometros.ToString("0");
-        metros += Time.deltaTime * 2f;
+        metros += Time.deltaTime * 5f;
 
-        if (metros >= limitemetros)
+       /* if (PlayerControllerUdemy.vivo == false)
         {
-            kilometros = kilometros + 1f;
-            metros = 0;
-
-            km.GetComponent<Text>().enabled = true;
-        }
-
-        /*if (PlayerControllerUdemy.vivo == false)
-        {
-            Time.timeScale = 0;
-        }*/
+            
+        } */
     }
 }

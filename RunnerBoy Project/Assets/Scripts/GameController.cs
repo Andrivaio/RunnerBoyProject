@@ -23,6 +23,8 @@ public class GameController : MonoBehaviour
     public float _PlacaVerdeVelocidade;
     public GameObject _PlacaVerdePrefab;
 
+    public float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+
         //PARA TUDO
         if (PlayerControllerUdemy.vivo == false)
         {
@@ -41,13 +45,16 @@ public class GameController : MonoBehaviour
 
             StopCoroutine("SpawnObstaculo");
         }
-
         //AUMENTO DE DIFICULDADE
-        if (UIController.metros == 10)
+        if (timer >= 20)
         {
-            _ConeVelocidade = _ConeVelocidade * 2;
-            _PlacaVerdeVelocidade = _PlacaVerdeVelocidade * 2;
+            _ChaoVelocidade = _ChaoVelocidade * 1.2f;
+            _ConeVelocidade = _ConeVelocidade * 1.2f;
+            _PlacaVerdeVelocidade = _PlacaVerdeVelocidade * 1.2f;
+
+            timer = 0;
         }
+
     }
 
     IEnumerator SpawnObstaculo()
