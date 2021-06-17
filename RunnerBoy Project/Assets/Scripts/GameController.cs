@@ -59,8 +59,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator SpawnObstaculo()
     {
-        //yield return new WaitForSeconds(_ObstaculoTempo);
-        //GameObject ObjetoPregos = Instantiate(_ObstaculoPrefab);
+        
         yield return new WaitForSeconds(_ConeTempo);
         GameObject ObjetoCone = Instantiate(_ConePrefab);
 

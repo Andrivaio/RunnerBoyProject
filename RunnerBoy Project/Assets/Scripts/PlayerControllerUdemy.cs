@@ -16,10 +16,16 @@ public class PlayerControllerUdemy : MonoBehaviour
     public Animator anim;
     public static bool vivo = true;
 
+    //som
+    public AudioSource hit;
+    public AudioSource track;
+    public AudioSource steps;
+    public AudioSource jump;
+
     void Start()
     {
         anim = GetComponent<Animator>();
-
+        steps.Play();
     }
 
     // Update is called once per frame
@@ -38,8 +44,12 @@ public class PlayerControllerUdemy : MonoBehaviour
                 playerRB.AddForce(new Vector2(0, forca), ForceMode2D.Impulse);
                 anim.SetBool("Run", false);
                 anim.SetBool("Jump", true);
+                steps.Pause();
+                jump.Play();
             }
         }
+        else steps.Stop();
+
     }
 
     //PULO
@@ -49,6 +59,7 @@ public class PlayerControllerUdemy : MonoBehaviour
         {
             anim.SetBool("Jump", false);
             anim.SetBool("Run", true);
+            steps.Play();
         }
     }
 
@@ -60,20 +71,28 @@ public class PlayerControllerUdemy : MonoBehaviour
             vivo = false;
             anim.SetBool("Jump", false);
             anim.SetBool("HeadHit", true);
+            hit.Play();
+            track.Stop();
+            steps.Stop();
+
         }
         else if (collision.gameObject.CompareTag("ObstaculoBaixo"))
         {
             vivo = false;
             anim.SetBool("Jump", false);
             anim.SetBool("Fall", true);
-
+            hit.Play();
+            track.Stop();
+            steps.Stop();
         }
-
         else collision.gameObject.CompareTag("ObstaculoBaixo");
         {
             vivo = false;
             anim.SetBool("Run", false);
             anim.SetBool("Fall", true);
+            hit.Play();
+            track.Stop();
+            steps.Stop();
         }
     }
     

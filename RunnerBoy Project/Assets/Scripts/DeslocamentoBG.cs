@@ -45,11 +45,11 @@ public class DeslocamentoBG : MonoBehaviour
         }
 
         //AUMENTO DE VELOCIDADE
-        if (timer >= 10)
+        /*if (timer >= 10)
         {
             _offsetVelocidade = _offsetVelocidade * 1.2f;
 
             timer = 0;
-        }
+        }*/
     }
 }
