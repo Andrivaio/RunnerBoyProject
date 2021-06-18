@@ -6,16 +6,16 @@ public class GameController : MonoBehaviour
 {
     // Propriedade do Chão
     [Header("Configuração do Chão")]
-    public float        _ChaoDestruido;
-    public float        _ChaoTamanho;
-    public float        _ChaoVelocidade;
-    public GameObject   _ChaoPrefab;
+    public float _ChaoDestruido;
+    public float _ChaoTamanho;
+    public float _ChaoVelocidade;
+    public GameObject _ChaoPrefab;
 
     // Propriedade do Obstáculo
     [Header("Configuração do Cone")]
-    public float        _ConeTempo;
-    public float        _ConeVelocidade;
-    public GameObject   _ConePrefab;
+    public float _ConeTempo;
+    public float _ConeVelocidade;
+    public GameObject _ConePrefab;
 
     // Propriedade do Obstáculo
     [Header("Configuração da Placa Verde")]
@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     public float _PlacaVerdeVelocidade;
     public GameObject _PlacaVerdePrefab;
 
+    [Header("Timer")]
     public float timer;
 
     // Start is called before the first frame update
@@ -39,27 +40,25 @@ public class GameController : MonoBehaviour
         //PARA TUDO
         if (PlayerControllerUdemy.vivo == false)
         {
-             _ChaoVelocidade = 0;
-             _ConeVelocidade = 0;
-             _PlacaVerdeVelocidade = 0;
+            _ChaoVelocidade = 0;
+            _ConeVelocidade = 0;
+            _PlacaVerdeVelocidade = 0;
 
             StopCoroutine("SpawnObstaculo");
         }
-        //AUMENTO DE DIFICULDADE
-        if (timer >= 20)
+        //AUMENTO DE VELOCIDADE
+        if (timer >= 10)
         {
             _ChaoVelocidade = _ChaoVelocidade * 1.2f;
             _ConeVelocidade = _ConeVelocidade * 1.2f;
             _PlacaVerdeVelocidade = _PlacaVerdeVelocidade * 1.2f;
 
             timer = 0;
-        }
-
+        } 
     }
-
     IEnumerator SpawnObstaculo()
     {
-        
+
         yield return new WaitForSeconds(_ConeTempo);
         GameObject ObjetoCone = Instantiate(_ConePrefab);
 
@@ -67,6 +66,5 @@ public class GameController : MonoBehaviour
         GameObject ObjetoPlacaVerde = Instantiate(_PlacaVerdePrefab);
 
         StartCoroutine("SpawnObstaculo");
-
     }
 }

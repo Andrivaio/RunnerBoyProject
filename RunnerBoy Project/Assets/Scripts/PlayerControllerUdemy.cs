@@ -74,7 +74,6 @@ public class PlayerControllerUdemy : MonoBehaviour
             hit.Play();
             track.Stop();
             steps.Stop();
-
         }
         else if (collision.gameObject.CompareTag("ObstaculoBaixo"))
         {
