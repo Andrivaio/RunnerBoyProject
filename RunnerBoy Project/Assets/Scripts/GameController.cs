@@ -23,6 +23,10 @@ public class GameController : MonoBehaviour
     public float _PlacaVerdeVelocidade;
     public GameObject _PlacaVerdePrefab;
 
+    // Propriedade do Obstáculo
+    [Header("Configuração do Prego")]
+    public GameObject _PregoPrefab;
+
     [Header("Timer")]
     public float timer;
 
@@ -46,7 +50,7 @@ public class GameController : MonoBehaviour
 
             StopCoroutine("SpawnObstaculo");
         }
-        //AUMENTO DE VELOCIDADE
+        //AUMENTO DE DIFICULDADE
         if (timer >= 10)
         {
             _ChaoVelocidade = _ChaoVelocidade * 1.2f;
@@ -54,7 +58,10 @@ public class GameController : MonoBehaviour
             _PlacaVerdeVelocidade = _PlacaVerdeVelocidade * 1.2f;
 
             timer = 0;
-        } 
+
+            //PQ SÓ FUNCIONA AQUI?
+            Instantiate(_PregoPrefab);
+        }     
     }
     IEnumerator SpawnObstaculo()
     {
