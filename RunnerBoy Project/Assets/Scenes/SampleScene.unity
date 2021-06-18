@@ -845,7 +845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 536948080}
   - component: {fileID: 536948079}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: steps
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1190,7 +1190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231151766}
   - component: {fileID: 1231151767}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}

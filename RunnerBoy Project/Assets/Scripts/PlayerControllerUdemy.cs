@@ -35,11 +35,10 @@ public class PlayerControllerUdemy : MonoBehaviour
         if (vivo == true)
         {
             //É CHÃO?
-
             liberaPulo = Physics2D.OverlapCircle(check.position, raio, isGrounded);
 
             //PULO
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && liberaPulo == true) 
             {
                 playerRB.AddForce(new Vector2(0, forca), ForceMode2D.Impulse);
                 anim.SetBool("Run", false);
