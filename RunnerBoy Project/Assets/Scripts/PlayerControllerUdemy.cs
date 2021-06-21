@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerUdemy : MonoBehaviour
-{
+public class PlayerControllerUdemy : MonoBehaviour {
     //pulo
     public bool liberaPulo = false;
     public float forca = 7f;
@@ -22,24 +21,17 @@ public class PlayerControllerUdemy : MonoBehaviour
     public AudioSource steps;
     public AudioSource jump;
 
-    void Start()
-    {
+    void Start() {
         anim = GetComponent<Animator>();
         steps.Play();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (vivo == true)
-        {
+    void Update() {
+        if (vivo == true) {
             //É CHÃO?
             liberaPulo = Physics2D.OverlapCircle(check.position, raio, isGrounded);
 
             //PULO
-            if (Input.GetKeyDown(KeyCode.Space) && liberaPulo == true) 
-            {
+            if (Input.GetKeyDown(KeyCode.Space) && liberaPulo == true) {
                 playerRB.AddForce(new Vector2(0, forca), ForceMode2D.Impulse);
                 anim.SetBool("Run", false);
                 anim.SetBool("Jump", true);
@@ -48,23 +40,17 @@ public class PlayerControllerUdemy : MonoBehaviour
             }
         }
         else steps.Stop();
-
     }
-
     //PULO
-    private void OnCollisionEnter2D(Collision2D outro)
-    {
-        if (outro.gameObject.CompareTag("Ground"))
-        {
+    private void OnCollisionEnter2D(Collision2D outro) {
+        if (outro.gameObject.CompareTag("Ground")) {
             anim.SetBool("Jump", false);
             anim.SetBool("Run", true);
             steps.Play();
         }
     }
-
     //MORTE
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
+    private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("ObsCima"))
         {
             vivo = false;
@@ -83,8 +69,7 @@ public class PlayerControllerUdemy : MonoBehaviour
             track.Stop();
             steps.Stop();
         }
-        else collision.gameObject.CompareTag("ObstaculoBaixo");
-        {
+        else collision.gameObject.CompareTag("ObstaculoBaixo"); {
             vivo = false;
             anim.SetBool("Run", false);
             anim.SetBool("Fall", true);

@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
-{
+public class UIController : MonoBehaviour {
+    
     public Text textmetros;
     public float metros;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public bool start;
+  
+    void Start() {
+       
     }
+    void Update() {
+        start = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        textmetros.text = metros.ToString("0");
-        metros += Time.deltaTime * 5f;
+        if (PlayerControllerUdemy.vivo == true && start == true) {
+            textmetros.text = metros.ToString("0");
+            metros += Time.deltaTime * 5f;
+        }
 
-       /* if (PlayerControllerUdemy.vivo == false)
+        if (PlayerControllerUdemy.vivo == false && start == false)
         {
-            
-        } */
+            metros = Time.deltaTime;
+        }
     }
 }

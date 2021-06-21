@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour {
             StopCoroutine("SpawnPrego");
         }
         //AUMENTO DE DIFICULDADE
-        if (timer >= 30) {
+        if (timer >= 60){
             _ChaoVelocidade = _ChaoVelocidade * 1.2f;
             _ConeVelocidade = _ConeVelocidade * 1.2f;
             _PlacaVerdeVelocidade = _PlacaVerdeVelocidade * 1.2f;
