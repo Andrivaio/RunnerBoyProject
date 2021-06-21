@@ -1077,12 +1077,15 @@ MonoBehaviour:
   _ChaoTamanho: 40
   _ChaoVelocidade: 7
   _ChaoPrefab: {fileID: 1784974339919968346, guid: a83934d4b5292f6409a846c8b0f53b1e, type: 3}
-  _ConeTempo: 3
+  _ConeTempo: 4
   _ConeVelocidade: 4
   _ConePrefab: {fileID: 9004469530791774024, guid: 6f0069298b283be4db7adda14673b65e, type: 3}
-  _PlacaVerdeTempo: 4
+  _PlacaVerdeTempo: 10
   _PlacaVerdeVelocidade: 4
   _PlacaVerdePrefab: {fileID: 8665487058798842075, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
+  _PregoTempo: 25
+  _PregoVelocidade: 4
+  _PregoPrefab: {fileID: 8071021196459365872, guid: e2fd86ff25f315a48a5e1966673cdcb0, type: 3}
   timer: 0
 --- !u!4 &959505411
 Transform:
