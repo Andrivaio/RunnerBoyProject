@@ -173,7 +173,6 @@ MonoBehaviour:
   _offsetVelocidade: 1
   _sortingLayer: Default
   _orderinLayer: -10
-  timer: 0
 --- !u!33 &9012116
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -273,7 +272,6 @@ MonoBehaviour:
   _offsetVelocidade: 1
   _sortingLayer: Default
   _orderinLayer: -10
-  timer: 0
 --- !u!33 &30126587
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -373,7 +371,6 @@ MonoBehaviour:
   _offsetVelocidade: 1
   _sortingLayer: Default
   _orderinLayer: -7
-  timer: 0
 --- !u!33 &72972854
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -494,6 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textmetros: {fileID: 524243073}
   metros: 0
+  start: 0
 --- !u!114 &513033353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,7 +1081,7 @@ MonoBehaviour:
   _PlacaVerdeTempo: 10
   _PlacaVerdeVelocidade: 4
   _PlacaVerdePrefab: {fileID: 8665487058798842075, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
-  _PregoTempo: 25
+  _PregoTempo: 34
   _PregoVelocidade: 4
   _PregoPrefab: {fileID: 8071021196459365872, guid: e2fd86ff25f315a48a5e1966673cdcb0, type: 3}
   timer: 0
@@ -1360,7 +1358,6 @@ MonoBehaviour:
   _offsetVelocidade: 1
   _sortingLayer: Default
   _orderinLayer: -8
-  timer: 0
 --- !u!33 &1355480648
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1928,7 +1925,6 @@ MonoBehaviour:
   _offsetVelocidade: 1
   _sortingLayer: Default
   _orderinLayer: -9
-  timer: 0
 --- !u!33 &1843879382
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2028,7 +2024,6 @@ MonoBehaviour:
   _offsetVelocidade: 1
   _sortingLayer: Default
   _orderinLayer: 14
-  timer: 0
 --- !u!33 &1852502173
 MeshFilter:
   m_ObjectHideFlags: 0
