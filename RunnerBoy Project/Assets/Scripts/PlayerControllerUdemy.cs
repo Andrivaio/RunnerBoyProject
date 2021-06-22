@@ -20,6 +20,9 @@ public class PlayerControllerUdemy : MonoBehaviour {
     public AudioSource steps;
     public AudioSource jump;
 
+    public GameObject GameOverScreen;
+    public GameObject Metros;
+
     void Start() {
         anim = GetComponent<Animator>();
         steps.Play();
@@ -67,6 +70,9 @@ public class PlayerControllerUdemy : MonoBehaviour {
             hit.Play();
             track.Stop();
             steps.Stop();
+
+            GameOverScreen.SetActive(true);
+            Metros.SetActive(false);
         }
         else collision.gameObject.CompareTag("ObstaculoBaixo"); {
             vivo = false;
