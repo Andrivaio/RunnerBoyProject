@@ -29,7 +29,7 @@ public class UIController : MonoBehaviour {
         }
     }
     public void PlayAgain() {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Teste");
     }
     /*public void Sair()
     {
