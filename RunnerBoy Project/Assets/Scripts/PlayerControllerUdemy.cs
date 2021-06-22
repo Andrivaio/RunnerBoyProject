@@ -14,7 +14,6 @@ public class PlayerControllerUdemy : MonoBehaviour {
     //animação
     public Animator anim;
     public static bool vivo = true;
-
     //som
     public AudioSource hit;
     public AudioSource track;
@@ -78,6 +77,5 @@ public class PlayerControllerUdemy : MonoBehaviour {
             steps.Stop();
         }
     }
-    
 }
 
