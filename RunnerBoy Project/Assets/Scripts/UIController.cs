@@ -28,12 +28,15 @@ public class UIController : MonoBehaviour {
             metros = Time.deltaTime;
         }
     }
-    public void PlayAgain() {
-        //SceneManager.LoadScene("Game");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    void PlayAgain() {
+        SceneManager.LoadScene("Game");
+        PlayerControllerUdemy.vivo = true;
+        metros = 0;
     }
-    /*public void Sair()
-    {
 
-    } */  
+    void Sair() {
+        Application.Quit();
+    }
 }
+    
+

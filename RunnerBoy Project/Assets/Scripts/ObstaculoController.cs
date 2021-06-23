@@ -13,7 +13,7 @@ public class ObstaculoController : MonoBehaviour {
     void FixedUpdate() {
         MoveObjeto();
     }
-    void MoveObjeto() {
+    public void MoveObjeto() {
         transform.Translate(Vector2.left * _GameController._ConeVelocidade * Time.smoothDeltaTime, 0);
         transform.Translate(Vector2.left * _GameController._PlacaVerdeVelocidade * Time.smoothDeltaTime, 0);
     }

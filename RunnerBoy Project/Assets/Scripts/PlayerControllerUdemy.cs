@@ -61,6 +61,8 @@ public class PlayerControllerUdemy : MonoBehaviour {
             hit.Play();
             track.Stop();
             steps.Stop();
+            GameOverScreen.SetActive(true);
+            Metros.SetActive(false);
         }
         else if (collision.gameObject.CompareTag("ObstaculoBaixo"))
         {
@@ -70,7 +72,6 @@ public class PlayerControllerUdemy : MonoBehaviour {
             hit.Play();
             track.Stop();
             steps.Stop();
-
             GameOverScreen.SetActive(true);
             Metros.SetActive(false);
         }
@@ -81,6 +82,8 @@ public class PlayerControllerUdemy : MonoBehaviour {
             hit.Play();
             track.Stop();
             steps.Stop();
+            GameOverScreen.SetActive(true);
+            Metros.SetActive(false);
         }
     }
 }
