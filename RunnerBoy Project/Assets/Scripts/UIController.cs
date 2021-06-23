@@ -29,7 +29,8 @@ public class UIController : MonoBehaviour {
         }
     }
     public void PlayAgain() {
-        SceneManager.LoadScene("Game");
+        //SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     /*public void Sair()
     {
