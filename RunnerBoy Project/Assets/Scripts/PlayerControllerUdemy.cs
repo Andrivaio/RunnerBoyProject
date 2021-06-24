@@ -61,7 +61,7 @@ public class PlayerControllerUdemy : MonoBehaviour {
             hit.Play();
             track.Stop();
             steps.Stop();
-            GameOverScreen.SetActive(true);
+            StartCoroutine("GameOver");
             Metros.SetActive(false);
         }
         else if (collision.gameObject.CompareTag("ObstaculoBaixo"))
@@ -72,7 +72,7 @@ public class PlayerControllerUdemy : MonoBehaviour {
             hit.Play();
             track.Stop();
             steps.Stop();
-            GameOverScreen.SetActive(true);
+            StartCoroutine("GameOver");
             Metros.SetActive(false);
         }
         else collision.gameObject.CompareTag("ObstaculoBaixo"); {
@@ -82,9 +82,14 @@ public class PlayerControllerUdemy : MonoBehaviour {
             hit.Play();
             track.Stop();
             steps.Stop();
-            GameOverScreen.SetActive(true);
+            StartCoroutine("GameOver");
             Metros.SetActive(false);
         }
+    }
+    IEnumerator GameOver() {
+        yield return new WaitForSeconds(1f);
+        GameOverScreen.SetActive(true);
+        StopCoroutine("GameOver");
     }
 }
 

@@ -59,8 +59,8 @@ public class GameController : MonoBehaviour {
             _PregoVelocidade = _PregoVelocidade * 1.2f;
 
             _ConeTempo = _ConeTempo * 0.8f;
-            _PlacaVerdeTempo = _PlacaVerdeTempo * 0.8f;
-            _PregoTempo = _PregoTempo * 0.8f;
+            _PlacaVerdeTempo = _PlacaVerdeTempo * 0.5f;
+            _PregoTempo = _PregoTempo * 0.2f;
 
             timer = 0;
         }    

@@ -22,19 +22,17 @@ public class UIController : MonoBehaviour {
             textpontos.text = metros.ToString("0") + " METROS";
             metros += Time.deltaTime * 5f;
         }
-
         if (PlayerControllerUdemy.vivo == false && start == false)
         {
             metros = Time.deltaTime;
         }
     }
-    void PlayAgain() {
+    public void PlayAgain() {
         SceneManager.LoadScene("Game");
         PlayerControllerUdemy.vivo = true;
         metros = 0;
     }
-
-    void Sair() {
+    public void Sair() {
         Application.Quit();
     }
 }
