@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4934145781514427635}
   - component: {fileID: 1834184503676482067}
   m_Layer: 0
-  m_Name: Cone
+  m_Name: Bloco7
   m_TagString: ObstaculoBaixo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9004469530791774024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.81, y: -3.547, z: 0}
+  m_LocalPosition: {x: 10.79, y: -3.547, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
