@@ -14,8 +14,6 @@ public class ObstaculoController : MonoBehaviour {
         MoveObjeto();
     }
     public void MoveObjeto() {
-        //transform.Translate(Vector2.left * _GameController._ConeVelocidade * Time.smoothDeltaTime, 0);
-        //transform.Translate(Vector2.left * _GameController._PlacaVerdeVelocidade * Time.smoothDeltaTime, 0);
         transform.Translate(Vector2.left * _GameController._BlocoVelocidade * Time.smoothDeltaTime, 0);
     }
     private void OnTriggerEnter2D(Collider2D collision) {

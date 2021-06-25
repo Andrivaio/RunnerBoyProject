@@ -20,7 +20,7 @@ public class UIController : MonoBehaviour {
         if (PlayerControllerUdemy.vivo == true && start == true) {
             textmetros.text = metros.ToString("0");
             textpontos.text = metros.ToString("0") + " METROS";
-            metros += Time.deltaTime * 5f;
+            metros += Time.deltaTime * 6f;
         }
         if (PlayerControllerUdemy.vivo == false && start == false)
         {

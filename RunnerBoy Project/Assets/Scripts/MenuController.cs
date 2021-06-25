@@ -14,6 +14,7 @@ public class MenuController : MonoBehaviour
     public GameObject botaoTutorial;
     public GameObject botaoCreditos;
     public GameObject botaoSair;
+    public GameObject telaLoading;
     //creditos
     public GameObject telaCreditos;
     public GameObject botaoVoltar;
@@ -30,6 +31,7 @@ public class MenuController : MonoBehaviour
     public void PlayAgain(){
         SceneManager.LoadScene("Game");
         PlayerControllerUdemy.vivo = true;
+        telaLoading.SetActive(true);
     }
     public void Tutorial()
     {
