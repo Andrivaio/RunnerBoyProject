@@ -1592,22 +1592,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 959505409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff7ecab39ad3af649a562543a7826004, type: 3}
+  m_Script: {fileID: 11500000, guid: 8822b79a85fb7894ebf4d6fe55b380c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _ChaoDestruido: -38
   _ChaoTamanho: 40
   _ChaoVelocidade: 7
   _ChaoPrefab: {fileID: 1784974339919968346, guid: a83934d4b5292f6409a846c8b0f53b1e, type: 3}
-  _ConeTempo: 4
-  _ConeVelocidade: 4
-  _ConePrefab: {fileID: 9004469530791774024, guid: 6f0069298b283be4db7adda14673b65e, type: 3}
-  _PlacaVerdeTempo: 10
-  _PlacaVerdeVelocidade: 4
-  _PlacaVerdePrefab: {fileID: 8665487058798842075, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
-  _PregoTempo: 34
-  _PregoVelocidade: 4
-  _PregoPrefab: {fileID: 8071021196459365872, guid: e2fd86ff25f315a48a5e1966673cdcb0, type: 3}
+  _BlocoObstaculos:
+  - {fileID: 2439129829590740041, guid: c543f6f4362d72541b2783d3d934ef46, type: 3}
+  - {fileID: 2461918350365012228, guid: d18bda60ab471d649b68cd9e0ffa3068, type: 3}
+  - {fileID: 2812093359379042561, guid: 158c3e81b39405d46ade76c96e3db6d9, type: 3}
+  - {fileID: 2439129829590740041, guid: 8e1baadf942cc364c8ed23e3f281101b, type: 3}
+  - {fileID: 2461918350365012228, guid: 2a0e7bf9afdcefe41b6888306b172597, type: 3}
+  - {fileID: 2812093359379042561, guid: b5ef98ebc557262468d74008f2bb9e71, type: 3}
+  - {fileID: 9004469530791774024, guid: 64304c06dc1e27d438096fee16778329, type: 3}
+  - {fileID: 8665487058798842075, guid: eda73cb213713f14e9b822bcc676f134, type: 3}
+  - {fileID: 8071021196459365872, guid: 31b10d25cb2568c45b5ea3fd90222692, type: 3}
+  _BlocoNumero: 0
+  _BlocoTempo: 5
+  _BlocoVelocidade: 6
   timer: 0
 --- !u!4 &959505411
 Transform:

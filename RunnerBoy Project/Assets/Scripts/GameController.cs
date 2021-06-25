@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
 
         }
         //AUMENTO DE DIFICULDADE
-        if (timer >= 10)
+        if (timer >= 60)
         {
             _ChaoVelocidade = _ChaoVelocidade * 1.1f;
             /*_ConeVelocidade = _ConeVelocidade * 1.1f;
