@@ -2760,7 +2760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _offset: 0
   _offsetIncremento: 0.001
-  _offsetVelocidade: 1
+  _offsetVelocidade: 1.4
   _sortingLayer: Default
   _orderinLayer: 14
 --- !u!33 &1852502173

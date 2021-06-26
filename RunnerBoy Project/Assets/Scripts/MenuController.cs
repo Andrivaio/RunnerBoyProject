@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-
-
 public class MenuController : MonoBehaviour
 {
     public GameObject logo;
@@ -26,7 +23,7 @@ public class MenuController : MonoBehaviour
         StartCoroutine("HideLogo");
     }
     void Update(){
-    
+       
     }
     public void PlayAgain(){
         SceneManager.LoadScene("Game");

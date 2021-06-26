@@ -32,8 +32,17 @@ public class PlayerControllerUdemy : MonoBehaviour {
             //É CHÃO?
             liberaPulo = Physics2D.OverlapCircle(check.position, raio, isGrounded);
 
-            //PULO
-            if (Input.GetKeyDown(KeyCode.Space) && liberaPulo == true) {
+            //PULO PC
+            /*if (Input.GetKeyDown(KeyCode.Space) && liberaPulo == true) {
+                playerRB.AddForce(new Vector2(0, forca), ForceMode2D.Impulse);
+                anim.SetBool("Run", false);
+                anim.SetBool("Jump", true);
+                steps.Pause();
+                jump.Play();
+            }*/
+            //PULO TOUCH
+            if (Input.GetMouseButtonDown(0) && liberaPulo == true)
+            {
                 playerRB.AddForce(new Vector2(0, forca), ForceMode2D.Impulse);
                 anim.SetBool("Run", false);
                 anim.SetBool("Jump", true);
