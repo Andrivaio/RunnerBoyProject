@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerControllerUdemy : MonoBehaviour {
     //pulo
@@ -38,6 +39,7 @@ public class PlayerControllerUdemy : MonoBehaviour {
             //É CHÃO?
             liberaPulo = Physics2D.OverlapCircle(check.position, raio, isGrounded);
             //PULO PC
+
             if (Input.GetKeyDown(KeyCode.Space) && liberaPulo == true)
             {
                 playerRB.AddForce(new Vector2(0, forca), ForceMode2D.Impulse);
@@ -47,14 +49,17 @@ public class PlayerControllerUdemy : MonoBehaviour {
                 jump.Play();
             }
             //PULO TOUCH
-            /*else if (Input.GetMouseButtonDown(0) && liberaPulo == true)
+            else if (Input.GetMouseButtonDown(0) && liberaPulo == true)
             {
+                if (!EventSystem.current.IsPointerOverGameObject()) { 
                 playerRB.AddForce(new Vector2(0, forca), ForceMode2D.Impulse);
                 anim.SetBool("Run", false);
                 anim.SetBool("Jump", true);
                 steps.Pause();
                 jump.Play();
-            }*/
+
+            }
+            }
         }
         else steps.Stop();
         //COLLIDERS
