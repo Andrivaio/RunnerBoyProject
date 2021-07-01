@@ -8,7 +8,7 @@ public class DeslocamentoBG : MonoBehaviour {
     private Material _objetoMaterial;
     public float _offset; //deslocamento
     public float _offsetIncremento;
-    public float _offsetVelocidade;
+    public static float _offsetVelocidade;
 
     public string _sortingLayer;
     public int _orderinLayer;
@@ -18,6 +18,8 @@ public class DeslocamentoBG : MonoBehaviour {
         _objetoRender.sortingLayerName = _sortingLayer;
         _objetoRender.sortingOrder = _orderinLayer;
         _objetoMaterial = _objetoRender.material;
+
+        DeslocamentoBG._offsetVelocidade = 1f;
     }
     void Update() {
         _offset += _offsetIncremento; //offset = offset + incremento (+2, +3, +4)

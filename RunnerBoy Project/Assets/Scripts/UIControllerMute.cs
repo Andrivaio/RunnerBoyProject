@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class UIController : MonoBehaviour {
+public class UIControllerMute : MonoBehaviour {
     
     public TMP_Text textmetros;
     public TMP_Text textpontos;
@@ -29,10 +29,10 @@ public class UIController : MonoBehaviour {
         audio2 = audio2.GetComponent<AudioSource>();
         audio3 = audio3.GetComponent<AudioSource>();
         audio4 = audio4.GetComponent<AudioSource>();
+        isMuting = true;
     }   
     void Update() {
         start = true;
-
         if (PlayerControllerUdemy.vivo == true && start == true) {
             textmetros.text = metros.ToString("0") + "M";
             textpontos.text = metros.ToString("0") + " METROS";
@@ -43,7 +43,7 @@ public class UIController : MonoBehaviour {
         }
     }
     public void PlayAgain() {
-        if (isMuting == false){
+        if (isMuting == false) {
             SceneManager.LoadScene("Game");
             PlayerControllerUdemy.vivo = true;
             metros = 0;
