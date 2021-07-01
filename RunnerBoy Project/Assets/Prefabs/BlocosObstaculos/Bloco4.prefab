@@ -101,6 +101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3133922588598462336}
     m_Modifications:
+    - target: {fileID: -3082839325054787437, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3662542459517553793, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -111,7 +115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3662542459517553793, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6547318
+      value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 3662542459517553793, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -149,7 +153,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacaVerde (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9126789991516067587, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
 --- !u!4 &4779489181228460430 stripped
 Transform:

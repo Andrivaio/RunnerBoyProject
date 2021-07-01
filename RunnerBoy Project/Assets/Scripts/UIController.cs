@@ -12,8 +12,19 @@ public class UIController : MonoBehaviour {
     public static float metros;
     public bool start;
 
+    public GameObject botaopause;
+    public GameObject botaoresume;
+    public GameObject botaomute;
+    public GameObject botaosom;
+    public GameObject pausescreen;
+
+    public AudioSource audio1;
+    public AudioSource audio2;
+    public AudioSource audio3;
+    public AudioSource audio4;
+
     void Start() {
-       
+        
     }
     void Update() {
         start = true;
@@ -34,6 +45,35 @@ public class UIController : MonoBehaviour {
     }
     public void Sair() {
         Application.Quit();
+    }
+    public void Pause() {
+        Time.timeScale = 0;
+        botaopause.SetActive(false);
+        botaoresume.SetActive(true);
+        pausescreen.SetActive(true);
+        Debug.Log("Pause");
+    } 
+    public void Resume() {
+        Time.timeScale = 1;
+        botaopause.SetActive(true);
+        botaoresume.SetActive(false);
+        pausescreen.SetActive(false);
+    }
+    public void Mute() {
+        audio1.Pause();
+        audio2.Pause();
+        audio3.Pause();
+        audio4.Pause();
+        botaomute.SetActive(true);
+        botaosom.SetActive(false);
+    } 
+    public void Som() {
+        audio1.Play();
+        audio2.Play();
+        audio3.Play();
+        audio4.Play();
+        botaomute.SetActive(false);
+        botaosom.SetActive(true);
     }
 }
     
