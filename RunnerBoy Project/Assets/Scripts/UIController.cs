@@ -60,20 +60,20 @@ public class UIController : MonoBehaviour {
         pausescreen.SetActive(false);
     }
     public void Mute() {
-        audio1.Pause();
-        audio2.Pause();
-        audio3.Pause();
-        audio4.Pause();
-        botaomute.SetActive(true);
-        botaosom.SetActive(false);
+        audio1.Stop();
+        audio2.Stop();
+        audio3.Stop();
+        audio4.Stop();
+        botaomute.SetActive(false);
+        botaosom.SetActive(true);
     } 
     public void Som() {
         audio1.Play();
         audio2.Play();
         audio3.Play();
         audio4.Play();
-        botaomute.SetActive(false);
-        botaosom.SetActive(true);
+        botaomute.SetActive(true);
+        botaosom.SetActive(false);
     }
 }
     
