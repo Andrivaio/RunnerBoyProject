@@ -61,6 +61,7 @@ public class UIController : MonoBehaviour {
         Time.timeScale = 0;
         DeslocamentoBG._offsetVelocidade = 0f;
         audio1.enabled = false;
+        audio3.enabled = false;
         botaopause.SetActive(false);
         botaoresume.SetActive(true);
         pausescreen.SetActive(true);
@@ -69,6 +70,7 @@ public class UIController : MonoBehaviour {
         Time.timeScale = 1;
         DeslocamentoBG._offsetVelocidade = 1f;
         audio1.enabled = true;
+        audio3.enabled = true;
         botaopause.SetActive(true);
         botaoresume.SetActive(false);
         pausescreen.SetActive(false);

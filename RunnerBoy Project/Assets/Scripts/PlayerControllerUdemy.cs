@@ -47,14 +47,14 @@ public class PlayerControllerUdemy : MonoBehaviour {
                 jump.Play();
             }
             //PULO TOUCH
-            else if (Input.GetMouseButtonDown(0) && liberaPulo == true)
+            /*else if (Input.GetMouseButtonDown(0) && liberaPulo == true)
             {
                 playerRB.AddForce(new Vector2(0, forca), ForceMode2D.Impulse);
                 anim.SetBool("Run", false);
                 anim.SetBool("Jump", true);
                 steps.Pause();
                 jump.Play();
-            }
+            }*/
         }
         else steps.Stop();
         //COLLIDERS
