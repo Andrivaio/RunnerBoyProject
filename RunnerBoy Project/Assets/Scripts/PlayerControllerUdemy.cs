@@ -49,7 +49,7 @@ public class PlayerControllerUdemy : MonoBehaviour {
             }
             //PULO TOUCH
             if (Input.GetMouseButtonDown(0) && liberaPulo == true){
-                if (!EventSystem.current.IsPointerOverGameObject()){
+                if (!IsPointerOverUIObject()){
                     playerRB.AddForce(new Vector2(0, forca), ForceMode2D.Impulse);
                     anim.SetBool("Run", false);
                     anim.SetBool("Jump", true);
@@ -118,6 +118,13 @@ public class PlayerControllerUdemy : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         GameOverScreen.SetActive(true);
         StopCoroutine("GameOver");
+    }
+    private bool IsPointerOverUIObject() {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
     }
 }
 

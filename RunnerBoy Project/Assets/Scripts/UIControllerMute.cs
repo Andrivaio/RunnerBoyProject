@@ -69,11 +69,21 @@ public class UIControllerMute : MonoBehaviour {
     public void Resume() {
         Time.timeScale = 1;
         DeslocamentoBG._offsetVelocidade = 1f;
-        audio1.enabled = true;
-        audio3.enabled = true;
         botaopause.SetActive(true);
         botaoresume.SetActive(false);
         pausescreen.SetActive(false);
+        if (isMuting == true){
+            audio1.enabled = false;
+            audio2.enabled = false;
+            audio3.enabled = false;
+            audio4.enabled = false;
+        }
+        else if (isMuting == false){
+            audio1.enabled = true;
+            audio2.enabled = true;
+            audio3.enabled = true;
+            audio4.enabled = true;
+        }
     }
     public void Mute() {
         isMuting = true;
