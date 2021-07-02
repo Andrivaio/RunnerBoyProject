@@ -149,6 +149,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3825393557955587229, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8665487058798842075, guid: 7ecdc8e4f34083f4f88a091efe47e73b, type: 3}
       propertyPath: m_Name
       value: PlacaVerde (1)
